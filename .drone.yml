@@ -2,4 +2,4 @@ pipeline:
   build:
     image: ubuntu:latest
     commands:
-      - sudo apt update
+      - apt update
