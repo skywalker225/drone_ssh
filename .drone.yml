@@ -4,5 +4,5 @@ pipeline:
     commands:
       - npm install
       - npm test
-    when:
-      branch: master
+      
+branches: master
