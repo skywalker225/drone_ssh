@@ -1,19 +1,8 @@
-kind: pinpeline
-type: docker
-name: greeting
-
-steps:
-- name: en
-  image: alpine
-  commands:
-  - echo hellox
-  - echo world
-  
-- name: es
-  image: alpine
-  commands:
-  - echo hola
-  - echo mundo
-  
-node:
-  type: build
+pipeline:
+  build:
+    image: node:latest
+    commands:
+      - npm install
+      - npm test
+    when:
+      branch: master
